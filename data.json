@@ -1,0 +1,82 @@
+{
+  "complaints": [
+    {
+      "id": "CC-A1B2",
+      "name": "Ravi Kumar",
+      "phone": "9876543210",
+      "category": "Road Damage",
+      "priority": "High",
+      "location": "Anna Nagar, Chennai - Near Main Road Signal",
+      "title": "Large pothole causing accidents near school zone",
+      "description": "There is a massive pothole near the school entrance on Main Road, Anna Nagar. It has been there for over 3 weeks and has caused 2 motorcycle accidents. Children crossing the road are at serious risk. Immediate repair is needed.",
+      "status": "Open",
+      "createdAt": "2026-04-10T08:30:00.000Z",
+      "updatedAt": "2026-04-10T08:30:00.000Z"
+    },
+    {
+      "id": "CC-C3D4",
+      "name": "Priya Lakshmi",
+      "phone": "8765432109",
+      "category": "Garbage",
+      "priority": "Medium",
+      "location": "Velachery, Chennai - 5th Cross Street",
+      "title": "Overflowing garbage bin not cleared for 5 days",
+      "description": "The municipal garbage bin on 5th Cross Street, Velachery has been overflowing for the past 5 days. Waste is spilling onto the street. Residents are concerned about health hazards and mosquito breeding.",
+      "status": "In Progress",
+      "createdAt": "2026-04-11T10:15:00.000Z",
+      "updatedAt": "2026-04-12T09:00:00.000Z"
+    },
+    {
+      "id": "CC-E5F6",
+      "name": "Suresh Babu",
+      "phone": "7654321098",
+      "category": "Street Light",
+      "priority": "Low",
+      "location": "T. Nagar, Chennai - Pondy Bazaar Back Lane",
+      "title": "Street light not working for 10 days",
+      "description": "The street light at Pondy Bazaar Back Lane has been non-functional for 10 days. The area becomes very dark at night. Local shopkeepers and residents feel unsafe walking through this road after 8 PM.",
+      "status": "Open",
+      "createdAt": "2026-04-12T14:00:00.000Z",
+      "updatedAt": "2026-04-12T14:00:00.000Z"
+    },
+    {
+      "id": "CC-G7H8",
+      "name": "Meena Devi",
+      "phone": "6543210987",
+      "category": "Water Supply",
+      "priority": "Critical",
+      "location": "Tambaram, Chennai - Block 4, Sri Nagar Colony",
+      "title": "No water supply for 3 days in entire colony",
+      "description": "The entire Sri Nagar Colony Block 4 has had no water supply for 3 consecutive days. Over 200 families are affected. People are struggling to get drinking water and are buying water at high cost. Pipeline burst suspected near the main junction.",
+      "status": "Open",
+      "createdAt": "2026-04-13T07:45:00.000Z",
+      "updatedAt": "2026-04-13T07:45:00.000Z"
+    },
+    {
+      "id": "CC-I9J0",
+      "name": "Karthik Raja",
+      "phone": "9123456780",
+      "category": "Drainage",
+      "priority": "High",
+      "location": "Adyar, Chennai - 2nd Avenue",
+      "title": "Blocked drain causing flooding during rain",
+      "description": "The main drainage channel on 2nd Avenue Adyar is completely blocked with debris. Even light rain causes water to flood into homes on the street. Three houses were flooded last week. The drain needs to be cleared urgently before the monsoon.",
+      "status": "Resolved",
+      "createdAt": "2026-04-08T11:30:00.000Z",
+      "updatedAt": "2026-04-14T08:00:00.000Z"
+    },
+    {
+      "id": "CC-ZXX6",
+      "name": "Jamunasri S",
+      "phone": "6369220699",
+      "category": "Road Damage",
+      "priority": "High",
+      "location": "krishnagiri-pochampalli",
+      "title": "big damage in roads",
+      "description": "there are lots of damage in our village due to which we cant travel",
+      "status": "Open",
+      "createdAt": "2026-04-14T06:15:24.265Z",
+      "updatedAt": "2026-04-14T06:15:24.265Z"
+    }
+  ]
+}

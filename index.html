@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CivicConnect – Report. Track. Resolve.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <span class="logo-icon">&#9632;</span>
+      <span class="logo-text">CivicConnect</span>
+    </div>
+    <div class="nav-links">
+      <a href="#report">Report</a>
+      <a href="#complaints">Browse</a>
+      <a href="#stats">Stats</a>
+    </div>
+    <div class="nav-badge">Beta v1.0</div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="hero-label">Citizen Complaint Portal</div>
+    <h1 class="hero-title">Your city.<br/>Your voice.<br/><em>Your power.</em></h1>
+    <p class="hero-sub">Report local issues — roads, garbage, water, street lights — and help authorities fix them faster.</p>
+    <div class="hero-cta">
+      <a href="#report" class="btn-primary">File a Complaint</a>
+      <a href="#complaints" class="btn-outline">View All Reports</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><span id="hero-count">0</span><small>Reports Filed</small></div>
+      <div class="hstat"><span>24h</span><small>Avg Response</small></div>
+      <div class="hstat"><span>6</span><small>Issue Types</small></div>
+    </div>
+  </header>
+
+  <!-- HOW IT WORKS -->
+  <section class="how">
+    <div class="section-label">How it works</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Submit</h3>
+        <p>Fill in the complaint form with your location, issue type, and details.</p>
+      </div>
+      <div class="step-arrow">&#8594;</div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Track</h3>
+        <p>Your complaint gets a unique ID. Status updates in real-time.</p>
+      </div>
+      <div class="step-arrow">&#8594;</div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Resolve</h3>
+        <p>Authorities review, act, and mark issues resolved on the platform.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPLAINT FORM -->
+  <section class="form-section" id="report">
+    <div class="form-header">
+      <div class="section-label">File a Report</div>
+      <h2>Submit a new complaint</h2>
+      <p>All fields are required. Be as specific as possible.</p>
+    </div>
+
+    <form class="complaint-form" id="complaintForm">
+      <div class="form-row">
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="e.g. Ravi Kumar" required />
+        </div>
+        <div class="field">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="e.g. 9876543210" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="category">Issue Category</label>
+          <select id="category" required>
+            <option value="">-- Select Category --</option>
+            <option value="Road Damage">&#128739; Road Damage</option>
+            <option value="Garbage">&#9851; Garbage / Waste</option>
+            <option value="Water Supply">&#128167; Water Supply</option>
+            <option value="Street Light">&#128161; Street Light</option>
+            <option value="Drainage">&#128680; Drainage / Flooding</option>
+            <option value="Other">&#128203; Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="priority">Priority Level</label>
+          <select id="priority" required>
+            <option value="">-- Select Priority --</option>
+            <option value="Low">&#128994; Low</option>
+            <option value="Medium">&#128993; Medium</option>
+            <option value="High">&#128308; High</option>
+            <option value="Critical">&#128721; Critical</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="location">Location / Area</label>
+        <input type="text" id="location" placeholder="e.g. Anna Nagar, Chennai - Near Main Road Signal" required />
+      </div>
+
+      <div class="field">
+        <label for="title">Complaint Title</label>
+        <input type="text" id="title" placeholder="e.g. Large pothole causing accidents near school" required />
+      </div>
+
+      <div class="field">
+        <label for="description">Detailed Description</label>
+        <textarea id="description" rows="4" placeholder="Describe the issue in detail — how long it has been there, how it affects residents, any danger it poses..." required></textarea>
+      </div>
+
+      <div class="form-footer">
+        <div id="form-msg" class="form-msg"></div>
+        <button type="submit" class="btn-submit" id="submitBtn">
+          <span class="btn-text">Submit Complaint</span>
+          <span class="btn-arrow">&#8594;</span>
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- STATS STRIP -->
+  <section class="stats-strip" id="stats">
+    <div class="stat-card">
+      <span class="stat-num" id="stat-total">0</span>
+      <span class="stat-label">Total Complaints</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num" id="stat-open">0</span>
+      <span class="stat-label">Open</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num" id="stat-progress">0</span>
+      <span class="stat-label">In Progress</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num" id="stat-resolved">0</span>
+      <span class="stat-label">Resolved</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num" id="stat-critical">0</span>
+      <span class="stat-label">Critical</span>
+    </div>
+  </section>
+
+  <!-- COMPLAINTS LISTING -->
+  <section class="complaints-section" id="complaints">
+    <div class="complaints-header">
+      <div>
+        <div class="section-label">Live Reports</div>
+        <h2>All Complaints</h2>
+      </div>
+      <div class="filter-bar">
+        <select id="filterCategory">
+          <option value="">All Categories</option>
+          <option value="Road Damage">Road Damage</option>
+          <option value="Garbage">Garbage</option>
+          <option value="Water Supply">Water Supply</option>
+          <option value="Street Light">Street Light</option>
+          <option value="Drainage">Drainage</option>
+          <option value="Other">Other</option>
+        </select>
+        <select id="filterStatus">
+          <option value="">All Status</option>
+          <option value="Open">Open</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Resolved">Resolved</option>
+        </select>
+        <select id="filterPriority">
+          <option value="">All Priority</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+          <option value="Critical">Critical</option>
+        </select>
+        <input type="text" id="searchBox" placeholder="Search location or title..." />
+      </div>
+    </div>
+
+    <div class="complaints-grid" id="complaintsGrid">
+      <div class="loading-state">Loading complaints...</div>
+    </div>
+
+    <div class="no-results" id="noResults" style="display:none;">
+      No complaints match your filters.
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">&#10005;</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">&#9632; CivicConnect</div>
+    <p>Bridging citizens and local authorities through technology.</p>
+    <p class="footer-stack">Built with Node.js &bull; Express &bull; HTML &bull; CSS &bull; JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

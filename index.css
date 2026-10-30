@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Inter', system-ui, sans-serif;
+        background: #F4F7FB;
+        color: #25354A;
+    }
+}
+
+@layer components {
+    .sidebar-link {
+        @apply flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer;
+    }
+
+    .sidebar-link-active {
+        background: rgba(255, 255, 255, 0.15);
+        color: #fff;
+        @apply shadow-sm;
+    }
+
+    .sidebar-link-inactive {
+        color: #93c5fd;
+    }
+
+    .sidebar-link-inactive:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+    }
+
+    .card {
+        @apply bg-white rounded-2xl shadow-sm border border-gray-100 p-6;
+    }
+
+    .btn-primary {
+        background: #142B4A;
+        color: #fff;
+        @apply px-4 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-all duration-200 flex items-center gap-2;
+    }
+
+    .btn-secondary {
+        @apply bg-white px-4 py-2 rounded-lg text-sm font-medium border border-gray-200 hover:bg-gray-50 transition-all duration-200 flex items-center gap-2;
+        color: #142B4A;
+    }
+
+    .btn-ghost {
+        @apply text-gray-600 px-3 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors duration-200 flex items-center gap-2;
+    }
+
+    .input-field {
+        @apply w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:outline-none transition-all bg-white;
+
+        &:focus {
+            border-color: #142B4A;
+            box-shadow: 0 0 0 3px rgba(20, 43, 74, 0.08);
+        }
+    }
+
+    .select-field {
+        @apply w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:outline-none transition-all bg-white;
+
+        &:focus {
+            border-color: #142B4A;
+            box-shadow: 0 0 0 3px rgba(20, 43, 74, 0.08);
+        }
+    }
+
+    .badge {
+        @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Toast animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.toast-enter {
+    animation: slideIn 0.3s ease;
+}
+
+.toast-exit {
+    animation: slideOut 0.3s ease;
+}
+
+/* Gold accent */
+.accent-gold {
+    color: #D6AD60;
+}
+
+.bg-accent-gold {
+    background: #D6AD60;
+}
